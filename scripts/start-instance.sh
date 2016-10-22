@@ -89,6 +89,8 @@ if [ -v ${INVENIO_WORKER_HOST} ]; then
     exit 1
 fi
 
+set -o xtrace
+
 # load virtualenvrapper:
 source $(which virtualenvwrapper.sh)
 
