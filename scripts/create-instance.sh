@@ -128,8 +128,9 @@ inveniomanage instance create ${INVENIO_WEB_INSTANCE}
 
 if [[ "$@" != *"--devel"* ]]; then
 # sphinxdoc-install-instance-begin
-cd ${INVENIO_WEB_INSTANCE}
-pip install -e .
+    cd ${INVENIO_WEB_INSTANCE}
+    pwd
+    pip install -e .
 # sphinxdoc-install-instance-end
 else
     pip install -r requirements-devel.txt
