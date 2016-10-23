@@ -41,7 +41,7 @@ RUN adduser --uid 1000 --disabled-password --gecos '' invenio && \
 USER invenio
 
 # Configure Invenio instance:
-ENV INVENIO_WEB_HOST=127.0.0.1
+ENV INVENIO_WEB_HOST=192.168.24.2
 ENV INVENIO_WEB_INSTANCE=invenio3
 ENV INVENIO_WEB_VENV=invenio3
 ENV INVENIO_USER_EMAIL=info@inveniosoftware.org
@@ -57,6 +57,9 @@ ENV INVENIO_WORKER_HOST=127.0.0.1
 
 # Create Invenio instance:
 RUN /code/scripts/create-instance.sh
+
+#RUN /code/scripts/setup1.sh
+#RUN /code/scripts/setup2.sh
 
 # Make given VENV default:
 ENV PATH=/home/invenio/.virtualenvs/invenio3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

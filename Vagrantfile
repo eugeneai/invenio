@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
     web.vm.network "forwarded_port", guest: 5000, host: 5000
     web.vm.network "private_network", ip: ENV.fetch('INVENIO_WEB_HOST','192.168.50.10')
     web.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--memory", "1024"]
+      #vb.customize ["modifyvm", :id, "--memory", "1024"]
       vb.customize ["modifyvm", :id, "--cpus", 2]
     end
   end

@@ -191,6 +191,8 @@ echo "OAISERVER_ID_PREFIX='oai:${INVENIO_WEB_INSTANCE}:recid/'" >> ../../var/${I
 
 # sphinxdoc-run-npm-begin
 cd ${INVENIO_WEB_INSTANCE}
+pip uninstall -y elasticsearch
+pip install 'elasticsearch<5.0.0'
 ${INVENIO_WEB_INSTANCE} npm
 cdvirtualenv var/${INVENIO_WEB_INSTANCE}-instance/static
 CI=true npm install
