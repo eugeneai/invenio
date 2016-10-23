@@ -133,6 +133,9 @@ if [[ "$@" != *"--devel"* ]]; then
     pip install -e .
 # sphinxdoc-install-instance-end
 else
+    cd ${INVENIO_WEB_INSTANCE}
+    pwd
+    ls -al
     pip install -r requirements-devel.txt
 fi
 

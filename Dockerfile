@@ -41,7 +41,7 @@ RUN adduser --uid 1000 --disabled-password --gecos '' invenio && \
 USER invenio
 
 # Configure Invenio instance:
-ENV INVENIO_WEB_HOST=192.168.24.2
+ENV INVENIO_WEB_HOST=192.168.10.126
 ENV INVENIO_WEB_INSTANCE=invenio3
 ENV INVENIO_WEB_VENV=invenio3
 ENV INVENIO_USER_EMAIL=info@inveniosoftware.org
